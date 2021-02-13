@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">PDM_Proyecto1_I_P1_JuegoAhorcado</string>
+    <string name="btn_crear">CREAR PALABRA</string>
+    <string name="btn_adivinar">ADIVINAR PALABRA</string>
+
 </resources>
