@@ -4,4 +4,5 @@
     <string name="btn_adivinar">ADIVINAR PALABRA</string>
     <string name="txtPista">Pista:</string>
     <string name="txtdescripcion">Imagen</string>
+    <string name="txtGanaste">¡GANASTE!</string>
 </resources>

@@ -2,5 +2,6 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/rum_raisin</item>
+        <item>@font/sancreek</item>
     </array>
 </resources>

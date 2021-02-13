@@ -4,44 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo2"
-    tools:context=".PantallaJuego">
+    android:background="@drawable/fondo3"
+    tools:context=".PantallaGanaste">
 
     <TextView
-        android:id="@+id/txtPista"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
-        android:fontFamily="@font/rum_raisin"
-        android:text="@string/txtPista"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/sancreek"
+        android:text="@string/txtGanaste"
         android:textColor="#fff"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageBrazoDerecho"
         android:layout_width="70dp"
         android:layout_height="166dp"
-        android:layout_marginTop="330dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="140dp"
         android:contentDescription="@string/txtdescripcion"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/brazo_derecho" />
 
     <ImageView
         android:id="@+id/imageCuerpo"
         android:layout_width="70dp"
         android:layout_height="166dp"
-        android:layout_marginTop="310dp"
-        android:layout_marginEnd="125dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="180dp"
         android:contentDescription="@string/txtdescripcion"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cuerpo" />
 
 
@@ -49,49 +49,47 @@
         android:id="@+id/imagePiernaDerecha"
         android:layout_width="70dp"
         android:layout_height="166dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="75dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="55dp"
         android:contentDescription="@string/txtdescripcion"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pierna_derecha" />
 
     <ImageView
         android:id="@+id/imagePiernaIzquierda"
         android:layout_width="70dp"
         android:layout_height="166dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="125dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="55dp"
         android:contentDescription="@string/txtdescripcion"
-        android:rotation="15"
+        android:rotation="5"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pierna_izquierda" />
 
     <ImageView
         android:id="@+id/imageBrazoIzquierdo"
         android:layout_width="70dp"
         android:layout_height="166dp"
-        android:layout_marginTop="330dp"
-        android:layout_marginEnd="175dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="140dp"
         android:contentDescription="@string/txtdescripcion"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/brazo_izquierdo" />
 
     <ImageView
         android:id="@+id/imageCabeza"
         android:layout_width="100dp"
         android:layout_height="122dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginEnd="120dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="320dp"
         android:contentDescription="@string/txtdescripcion"
-        android:onClick="ganar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cara_triste" />
-
+        app:srcCompat="@drawable/cara_feliz" />
 </androidx.constraintlayout.widget.ConstraintLayout>
