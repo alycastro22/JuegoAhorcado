@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "PDM_Proyecto1_I_P1_JuegoAhorcado"
