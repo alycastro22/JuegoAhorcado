@@ -3,9 +3,9 @@ package hn.edu.ujcv.pdm_proyecto1_i_p1_juegoahorcado
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class PantallaJuego : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_pantalla_juego)
     }
 }

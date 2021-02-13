@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".PantallaInicio"
     android:background="@drawable/fondo">
 
     <TextView
@@ -15,6 +15,7 @@
         android:background="@drawable/botones_inicio"
         android:fontFamily="@font/rum_raisin"
         android:gravity="center"
+        android:onClick="jugar"
         android:text="@string/btn_crear"
         android:textColor="#000"
         android:textSize="32sp"

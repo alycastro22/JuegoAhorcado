@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_Proyecto1_I_P1_JuegoAhorcado">
-        <activity android:name=".MainActivity">
+        <activity android:name=".PantallaJuego"></activity>
+        <activity android:name=".PantallaInicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

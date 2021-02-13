@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    tools:context=".PantallaJuego">
+
+    <TextView
+        android:id="@+id/txtPista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:fontFamily="@font/rum_raisin"
+        android:text="@string/txtPista"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageBrazoDerecho"
+        android:layout_width="70dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginEnd="80dp"
+        android:contentDescription="@string/txtdescripcion"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/brazo_derecho" />
+
+    <ImageView
+        android:id="@+id/imageCuerpo"
+        android:layout_width="70dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginEnd="125dp"
+        android:contentDescription="@string/txtdescripcion"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cuerpo" />
+
+
+    <ImageView
+        android:id="@+id/imagePiernaDerecha"
+        android:layout_width="70dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="75dp"
+        android:contentDescription="@string/txtdescripcion"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pierna_derecha" />
+
+    <ImageView
+        android:id="@+id/imagePiernaIzquierda"
+        android:layout_width="70dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="125dp"
+        android:contentDescription="@string/txtdescripcion"
+        android:rotation="15"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pierna_izquierda" />
+
+    <ImageView
+        android:id="@+id/imageBrazoIzquierdo"
+        android:layout_width="70dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginEnd="175dp"
+        android:contentDescription="@string/txtdescripcion"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/brazo_izquierdo" />
+
+    <ImageView
+        android:id="@+id/imageCabeza"
+        android:layout_width="100dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="120dp"
+        android:contentDescription="@string/txtdescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cabeza" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
