@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_Proyecto1_I_P1_JuegoAhorcado">
-        <activity android:name=".PantallaPerdedor"></activity>
+        <activity android:name=".PantallaAdivinar"></activity>
+        <activity android:name=".PantallaPerdedor" />
         <activity android:name=".PantallaGanaste" />
         <activity android:name=".PantallaJuego" />
         <activity android:name=".PantallaInicio">

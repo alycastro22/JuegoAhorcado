@@ -2,8 +2,12 @@
     <string name="app_name">PDM_Proyecto1_I_P1_JuegoAhorcado</string>
     <string name="btn_crear">CREAR PALABRA</string>
     <string name="btn_adivinar">ADIVINAR PALABRA</string>
-    <string name="txtPista">Pista:</string>
+    <string name="txtPista">Pista:"Esta en el Cielo"</string>
     <string name="txtdescripcion">Imagen</string>
     <string name="txtGanaste">¡GANASTE!</string>
     <string name="txtPerdiste">¡PERDISTE!</string>
+    <string name="txtNubes">¡La palabra correcta es: Nubes!</string>
+    <string name="txtPista2">Esta en el cielo:</string>
+    <string name="txtPalabra">"Nubes"</string>
+    <string name="btnAgregar">Agregar Palabra</string>
 </resources>
