@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo3"
-    tools:context=".PantallaGanaste">
+    android:background="@drawable/fondo4"
+    tools:context=".PantallaPerdedor">
 
     <TextView
-        android:id="@+id/txtGanaste"
+        android:id="@+id/txtPerdiste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:fontFamily="@font/sancreek"
-        android:text="@string/txtGanaste"
+        android:text="@string/txtPerdiste"
         android:textColor="#fff"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"

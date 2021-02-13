@@ -16,4 +16,8 @@ class PantallaJuego : AppCompatActivity() {
         startActivity(cambiarPantalla)
     }
 
+    fun perder(view: View) {
+        val cambiarPantalla = Intent(this, PantallaPerdedor::class.java)
+        startActivity(cambiarPantalla)
+    }
 }

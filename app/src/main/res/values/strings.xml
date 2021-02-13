@@ -5,4 +5,5 @@
     <string name="txtPista">Pista:</string>
     <string name="txtdescripcion">Imagen</string>
     <string name="txtGanaste">¡GANASTE!</string>
+    <string name="txtPerdiste">¡PERDISTE!</string>
 </resources>
