@@ -11,5 +11,5 @@
     <string name="txtPalabra">"Nubes"</string>
     <string name="btnAgregar">Agregar Palabra</string>
     <string name="TxtPalabra">Nube</string>
-    <string name="Pista1">La pista es: %s</string>
+    <string name="Pista1">La pista es %S </string>
 </resources>
