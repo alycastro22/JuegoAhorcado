@@ -17,6 +17,11 @@ class PantallaInicio : AppCompatActivity() {
         startActivity(cambiarPantalla)
 
     }
+    fun palabra(view: View) {
+        val cambiarPantalla = Intent(this, PantallaAdivinar::class.java)
+        startActivity(cambiarPantalla)
+
+    }
 
 
 }

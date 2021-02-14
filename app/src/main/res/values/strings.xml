@@ -10,4 +10,6 @@
     <string name="txtPista2">Esta en el cielo:</string>
     <string name="txtPalabra">"Nubes"</string>
     <string name="btnAgregar">Agregar Palabra</string>
+    <string name="TxtPalabra">Nube</string>
+    <string name="Pista1">La pista es: %s</string>
 </resources>
