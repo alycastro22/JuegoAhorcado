@@ -19,14 +19,24 @@ class PantallaJuego : AppCompatActivity() {
         setContentView(R.layout.activity_pantalla_juego)
         mostrarpista(palabra)
         btnValidar.setOnClickListener{Validar(palabra)}
+        agregarPalabra()
+
 
     }
-    private var palabra = mutableMapOf<String,String>("Araña" to "Animal 8 patas", "Semana" to "Tiene 7 días", "Julio" to "Septimo Mes", "Cancion" to "Melodia y ritmo", "Araña" to "Animal 8 patas ",
-    "Carro" to "Vehiculo", "Perro" to "Mascota")
+    private var palabra = mutableMapOf<String,String>("araña" to "Animal 8 patas", "semana" to "Tiene 7 días", "julio" to "Septimo Mes", "cancion" to "Melodia y ritmo", "araña" to "Animal 8 patas ",
+    "carro" to "Vehiculo", "perro" to "Mascota", "rojo" to "Color Pasión", "domingo" to "Día de descanso", "luna" to "satelite natural de la tierra", "año" to "tiene 365 días ")
     private val palabrax = palabra.keys.random()
     private val pistax= palabra.getValue(palabrax)
     private var intentos = 6
     private var partecuerpo = 0
+
+
+    fun agregarPalabra(){
+        val bundle = intent.extras
+        val palabraN = bundle?.get("Palabra")
+        val pistaN = bundle?.get("pista")
+        palabra.put(palabraN.toString(), pistaN.toString())
+    }
 
 
 
@@ -43,7 +53,7 @@ class PantallaJuego : AppCompatActivity() {
          pista.add("Mascota")
          pista.add(lista.toString())
 
-        val palabras = ArrayList<String>()
+         val palabras = ArrayList<String>()
          palabras.add("Araña")
          palabras.add("Semana")
          palabras.add("Julio")
@@ -51,6 +61,11 @@ class PantallaJuego : AppCompatActivity() {
          palabras.add("Carro")
          palabras.add("Perro")
          palabras.add(listaPalabra.toString())
+
+         /*val bundle = intent.extras
+         val palabraN = bundle?.get("Palabra")
+         val pistaN = bundle?.get("pista")
+         palabra.put(palabraN.toString(), pistaN.toString())*/
 
         txtPista.text = getString(R.string.Pista1, pistax)
 
@@ -63,6 +78,7 @@ class PantallaJuego : AppCompatActivity() {
         if (txtpalabra.text.toString().equals(palabrax)) {
             val ganar = Intent(this, PantallaGanaste::class.java)
             startActivity(ganar)
+            partecuerpo--
             limpiar()
         }
         if (partecuerpo<intentos){

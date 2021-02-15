@@ -3,6 +3,7 @@ package hn.edu.ujcv.pdm_proyecto1_i_p1_juegoahorcado
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_pantalla_adivinar.*
 import java.util.*
@@ -17,18 +18,12 @@ class PantallaAdivinar: AppCompatActivity() {
     }
 
     fun guardarpalabra() {
-        val listpista = ArrayList<String>()
-        listpista.add(idTxtPista.text.toString())
-        println(listpista)
 
-        val listapalabra = ArrayList<String>()
-        listapalabra.add(idTxtPalabra.text.toString())
-        println(listapalabra)
-
-        val i = Intent(this, PantallaJuego::class.java)
-        i.putStringArrayListExtra("Lista", listpista)
-        i.putStringArrayListExtra("listapa", listapalabra)
-        startActivity(i)
+        val intent  = Intent(this, PantallaJuego::class.java)
+        intent.putExtra("Palabra", idTxtPalabra.text.toString())
+        intent.putExtra("pista", idTxtPista.text.toString())
+        startActivity(intent)
+        Toast.makeText(this, "Palabra agregada con éxito", Toast.LENGTH_SHORT).show()
 
     }
 

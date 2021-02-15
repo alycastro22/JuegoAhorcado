@@ -11,14 +11,14 @@
         android:id="@+id/txtPista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="664dp"
+        android:layout_marginBottom="692dp"
         android:fontFamily="@font/rum_raisin"
         android:text="@string/txtPista"
         android:textColor="#fff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -95,21 +95,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cara_triste" />
 
+
     <EditText
         android:id="@+id/txtpalabra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="611dp"
-        android:layout_marginEnd="85dp"
+        android:layout_marginTop="112dp"
         android:autofillHints=""
         android:backgroundTint="@color/white"
-        android:ems="10"
+        android:ems="3"
+        android:fontFamily="@font/rum_raisin"
+        android:hint="@string/palabra"
         android:inputType="textPersonName"
-        android:text="@string/palabra"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -117,8 +119,8 @@
         android:id="@+id/btnValidar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="301dp"
-        android:layout_marginTop="662dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="380dp"
         android:text="@string/validar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
