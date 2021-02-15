@@ -12,4 +12,8 @@
     <string name="btnAgregar">Agregar Palabra</string>
     <string name="TxtPalabra">Nube</string>
     <string name="Pista1">La pista es %S </string>
+    <string name="intento">Intento %S </string>
+    <string name="palabra">Palabra</string>
+    <string name="validar">Validar</string>
+    <string name="intentos">Intentos</string>
 </resources>
