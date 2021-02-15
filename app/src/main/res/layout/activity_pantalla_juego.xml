@@ -11,15 +11,17 @@
         android:id="@+id/txtPista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="692dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="636dp"
         android:fontFamily="@font/rum_raisin"
         android:text="@string/txtPista"
         android:textColor="#fff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageBrazoDerecho"
@@ -100,7 +102,7 @@
         android:id="@+id/txtpalabra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="140dp"
         android:autofillHints=""
         android:backgroundTint="@color/white"
         android:ems="3"
@@ -111,7 +113,6 @@
         android:textColorHint="@color/white"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
