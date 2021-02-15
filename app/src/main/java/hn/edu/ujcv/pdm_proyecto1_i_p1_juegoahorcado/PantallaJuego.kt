@@ -57,7 +57,6 @@ class PantallaJuego : AppCompatActivity() {
     fun Validar(mutableMap: MutableMap<String, String>) {
         intentos=intentos-1
 
-        txvIntento.text = getString(R.string.intento, intentos.toString())
         do{
             if (intentos == 5) {
                 imageCabeza.visibility = View.VISIBLE
