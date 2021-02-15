@@ -3,6 +3,7 @@ package hn.edu.ujcv.pdm_proyecto1_i_p1_juegoahorcado
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -44,49 +45,26 @@ class PantallaJuego : AppCompatActivity() {
         txtPista.text = getString(R.string.Pista1, pistax)
 
         var parte = ArrayList<ImageView>(6)
-        parte = arrayListOf(findViewById<ImageView>(R.id.imageCabeza))
+        parte = arrayListOf(findViewById(R.id.imageCabeza))
         parte = arrayListOf(findViewById(R.id.imageCuerpo))
         parte = arrayListOf(findViewById(R.id.imageBrazoDerecho))
         parte = arrayListOf(findViewById(R.id.imageBrazoIzquierdo))
         parte = arrayListOf(findViewById(R.id.imagePiernaDerecha))
         parte = arrayListOf(findViewById(R.id.imagePiernaIzquierda))
 
-        for ( i in palabrax) {
-            if(txtpalabra.text.equals(palabrax)){
-                val ganar = Intent(this, PantallaGanaste::class.java)
-                startActivity(ganar)
-            }else if (partecuerpo < intentos){
-                parte[intentos].visibility
-                intentos++
-                val perder = Intent(this, PantallaPerdedor::class.java)
-                startActivity(perder)
-            }
+
+        if(txtpalabra.text.toString().equals(palabrax)){
+            val ganar = Intent(this, PantallaGanaste::class.java)
+            startActivity(ganar)
+        }else if (partecuerpo < intentos){
+            parte[intentos].visibility
+            intentos++
+            val perder = Intent(this, PantallaPerdedor::class.java)
+            startActivity(perder)
         }
+
     }
 
-
-
-    /* fun validarletra(): Boolean{
-             Pattern p = Pattern.compile("^([A-Z])$");
-             Matcher m = p.matcher(.getText());
-
-
-             if(m.find() && m.group().equals(.getText())){
-                 return true;
-             } else{
-                 Alert alert =new Alert(Alert.AlertType.ERROR);
-                 alert.setTitle("Validar nombre");
-                 alert.setHeaderText(null);
-                 alert.setContentText("Verifique la siguiente información: " +
-                         " \nDeberá escribir un nombre que contenga:" +
-                         " \nPrimera letra mayúscula" +
-                         " \nAl menos un apellido" +
-                         " \nEste campo solo letras");
-                 alert.showAndWait();
-
-                 return false;
-             }
-         }*/
 
 }
 

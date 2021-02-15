@@ -21,8 +21,13 @@ class PantallaAdivinar: AppCompatActivity() {
         listpista.add(idTxtPista.text.toString())
         println(listpista)
 
+        val listapalabra = ArrayList<String>()
+        listapalabra.add(idTxtPalabra.text.toString())
+        println(listapalabra)
+
         val i = Intent(this, PantallaJuego::class.java)
         i.putStringArrayListExtra("Lista", listpista)
+        i.putStringArrayListExtra("listapa", listapalabra)
         startActivity(i)
 
     }
