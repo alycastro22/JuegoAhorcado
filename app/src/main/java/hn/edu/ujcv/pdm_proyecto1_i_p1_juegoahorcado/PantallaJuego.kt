@@ -58,50 +58,49 @@ class PantallaJuego : AppCompatActivity() {
         intentos=intentos-1
 
         txvIntento.text = getString(R.string.intento, intentos.toString())
+        do{
+            if (intentos == 5) {
+                imageCabeza.visibility = View.VISIBLE
+            }
+            if (intentos == 4) {
+                imageCabeza.visibility = View.VISIBLE
+                imageCuerpo.visibility = View.VISIBLE
+            }
+            if (intentos == 3) {
+                imageCabeza.visibility = View.VISIBLE
+                imageCuerpo.visibility = View.VISIBLE
+                imageBrazoDerecho.visibility = View.VISIBLE
+            }
+            if (intentos == 2) {
+                imageCabeza.visibility = View.VISIBLE
+                imageCuerpo.visibility = View.VISIBLE
+                imageBrazoDerecho.visibility = View.VISIBLE
+                imageBrazoIzquierdo.visibility = View.VISIBLE
+            }
+            if (intentos == 1) {
+                imageCabeza.visibility = View.VISIBLE
+                imageCuerpo.visibility = View.VISIBLE
+                imageBrazoDerecho.visibility = View.VISIBLE
+                imageBrazoIzquierdo.visibility = View.VISIBLE
+                imagePiernaDerecha.visibility = View.VISIBLE
+            }
+            if (intentos == 0) {
+                imageCabeza.visibility = View.VISIBLE
+                imageCuerpo.visibility = View.VISIBLE
+                imageBrazoDerecho.visibility = View.VISIBLE
+                imageBrazoIzquierdo.visibility = View.VISIBLE
+                imagePiernaDerecha.visibility = View.VISIBLE
+                imagePiernaIzquierda.visibility = View.VISIBLE
+                val perder = Intent(this, PantallaPerdedor::class.java)
+                startActivity(perder)
+            }
 
-        while(intentos!=0){
-            //
-            // intentos=intentos--
             if (txtpalabra.text.toString().equals(palabrax)) {
                 val ganar = Intent(this, PantallaGanaste::class.java)
                 startActivity(ganar)
             }
-            if (intentos == 5) {
-            imageCabeza.visibility = View.VISIBLE
-            }
-            if (intentos == 4) {
-            imageCabeza.visibility = View.VISIBLE
-            imageCuerpo.visibility = View.VISIBLE
-            }
-            if (intentos == 3) {
-            imageCabeza.visibility = View.VISIBLE
-            imageCuerpo.visibility = View.VISIBLE
-            imageBrazoDerecho.visibility = View.VISIBLE
-            }
-            if (intentos == 2) {
-            imageCabeza.visibility = View.VISIBLE
-            imageCuerpo.visibility = View.VISIBLE
-            imageBrazoDerecho.visibility = View.VISIBLE
-            imageBrazoIzquierdo.visibility = View.VISIBLE
-            }
-            if (intentos == 1) {
-            imageCabeza.visibility = View.VISIBLE
-            imageCuerpo.visibility = View.VISIBLE
-            imageBrazoDerecho.visibility = View.VISIBLE
-            imageBrazoIzquierdo.visibility = View.VISIBLE
-            imagePiernaDerecha.visibility = View.VISIBLE
-            }
-            if (intentos == 0) {
-            imageCabeza.visibility = View.VISIBLE
-            imageCuerpo.visibility = View.VISIBLE
-            imageBrazoDerecho.visibility = View.VISIBLE
-            imageBrazoIzquierdo.visibility = View.VISIBLE
-            imagePiernaDerecha.visibility = View.VISIBLE
-            imagePiernaIzquierda.visibility = View.VISIBLE
-            val perder = Intent(this, PantallaPerdedor::class.java)
-            startActivity(perder)
-            }
-        }
+        }while(txtpalabra.text.toString() != palabrax)
+
 
     }
 
