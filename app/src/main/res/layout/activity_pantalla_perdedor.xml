@@ -19,6 +19,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/btSalir"
+        android:layout_width="162dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="400dp"
+        android:background="@drawable/botones_inicio"
+        android:fontFamily="@font/rum_raisin"
+        android:gravity="center"
+        android:onClick="salir"
+        android:text="@string/btn_salir"
+        android:textColor="#000"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btnJugarNuevo"
+        android:layout_width="162dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="400dp"
+        android:background="@drawable/botones_inicio"
+        android:fontFamily="@font/rum_raisin"
+        android:gravity="center"
+        android:onClick="jugar"
+        android:text="@string/btn_jugar"
+        android:textColor="#000"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

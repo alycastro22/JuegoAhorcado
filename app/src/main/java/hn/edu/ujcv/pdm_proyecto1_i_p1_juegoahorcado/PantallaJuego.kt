@@ -21,7 +21,8 @@ class PantallaJuego : AppCompatActivity() {
         btnValidar.setOnClickListener{Validar(palabra)}
 
     }
-    private var palabra = mutableMapOf<String,String>("Araña" to "Animal 8 patas", "Semana" to "Tiene 7 días", "Julio" to "Septimo Mes", "Cancion" to "Melodia y ritmo", "Araña" to "Animal 8 patas ")
+    private var palabra = mutableMapOf<String,String>("Araña" to "Animal 8 patas", "Semana" to "Tiene 7 días", "Julio" to "Septimo Mes", "Cancion" to "Melodia y ritmo", "Araña" to "Animal 8 patas ",
+    "Carro" to "Vehiculo", "Perro" to "Mascota")
     private val palabrax = palabra.keys.random()
     private val pistax= palabra.getValue(palabrax)
     private var intentos = 6
@@ -30,60 +31,74 @@ class PantallaJuego : AppCompatActivity() {
 
 
      fun mostrarpista(mutableMap: MutableMap<String, String>){
-        val lista : ArrayList<String>? = intent.getStringArrayListExtra("Lista")
-        val pista = ArrayList<String>()
+         val lista : ArrayList<String>? = intent.getStringArrayListExtra("Lista")
+         val listaPalabra : ArrayList<String>? = intent.getStringArrayListExtra("listapa")
 
-        pista.add("Animal de 8 patas")
-        pista.add("Tiene 7 días")
-        pista.add("Septimo Mes")
-        pista.add("Tiene melodía y ritmo")
+         val pista = ArrayList<String>()
+         pista.add("Animal de 8 patas")
+         pista.add("Tiene 7 días")
+         pista.add("Septimo Mes")
+         pista.add("Tiene melodía y ritmo")
+         pista.add("Vehiculo")
+         pista.add("Mascota")
+         pista.add(lista.toString())
 
         val palabras = ArrayList<String>()
-        palabras.add("ARAÑA")
-        palabras.add("SEMANA")
-        palabras.add("JULIO")
-        palabras.add("CANCION")
-
-        //val palabra = mutableMapOf<String,String>("Araña" to "Animal 8 patas", "Semana" to "Tiene 7 días", "Julio" to "Septimo Mes", "Cancion" to "Melodia y ritmo")
-
-
+         palabras.add("Araña")
+         palabras.add("Semana")
+         palabras.add("Julio")
+         palabras.add("Cancion")
+         palabras.add("Carro")
+         palabras.add("Perro")
+         palabras.add(listaPalabra.toString())
 
         txtPista.text = getString(R.string.Pista1, pistax)
-
 
     }
 
 
     fun Validar(mutableMap: MutableMap<String, String>) {
-        intentos=intentos-1
 
-        do{
-            if (intentos == 5) {
+
+        if (txtpalabra.text.toString().equals(palabrax)) {
+            val ganar = Intent(this, PantallaGanaste::class.java)
+            startActivity(ganar)
+            limpiar()
+        }
+        if (partecuerpo<intentos){
+            partecuerpo++
+
+            if (partecuerpo == 1) {
                 imageCabeza.visibility = View.VISIBLE
+                limpiar()
             }
-            if (intentos == 4) {
+            if (partecuerpo == 2) {
                 imageCabeza.visibility = View.VISIBLE
                 imageCuerpo.visibility = View.VISIBLE
+                limpiar()
             }
-            if (intentos == 3) {
+            if (partecuerpo == 3) {
                 imageCabeza.visibility = View.VISIBLE
                 imageCuerpo.visibility = View.VISIBLE
                 imageBrazoDerecho.visibility = View.VISIBLE
+                limpiar()
             }
-            if (intentos == 2) {
+            if (partecuerpo == 4) {
                 imageCabeza.visibility = View.VISIBLE
                 imageCuerpo.visibility = View.VISIBLE
                 imageBrazoDerecho.visibility = View.VISIBLE
                 imageBrazoIzquierdo.visibility = View.VISIBLE
+                limpiar()
             }
-            if (intentos == 1) {
+            if (partecuerpo == 5) {
                 imageCabeza.visibility = View.VISIBLE
                 imageCuerpo.visibility = View.VISIBLE
                 imageBrazoDerecho.visibility = View.VISIBLE
                 imageBrazoIzquierdo.visibility = View.VISIBLE
                 imagePiernaDerecha.visibility = View.VISIBLE
+                limpiar()
             }
-            if (intentos == 0) {
+            if (partecuerpo == 6) {
                 imageCabeza.visibility = View.VISIBLE
                 imageCuerpo.visibility = View.VISIBLE
                 imageBrazoDerecho.visibility = View.VISIBLE
@@ -92,15 +107,13 @@ class PantallaJuego : AppCompatActivity() {
                 imagePiernaIzquierda.visibility = View.VISIBLE
                 val perder = Intent(this, PantallaPerdedor::class.java)
                 startActivity(perder)
+                limpiar()
             }
+        }
 
-            if (txtpalabra.text.toString().equals(palabrax)) {
-                val ganar = Intent(this, PantallaGanaste::class.java)
-                startActivity(ganar)
-            }
-        }while(txtpalabra.text.toString() != palabrax)
-
-
+    }
+    fun limpiar(){
+        txtpalabra.text.clear()
     }
 
 
