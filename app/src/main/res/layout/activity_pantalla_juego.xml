@@ -28,7 +28,7 @@
         android:layout_marginTop="330dp"
         android:layout_marginEnd="80dp"
         android:contentDescription="@string/txtdescripcion"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/brazo_derecho" />
@@ -40,7 +40,7 @@
         android:layout_marginTop="310dp"
         android:layout_marginEnd="125dp"
         android:contentDescription="@string/txtdescripcion"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cuerpo" />
@@ -53,7 +53,7 @@
         android:layout_marginTop="430dp"
         android:layout_marginEnd="75dp"
         android:contentDescription="@string/txtdescripcion"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pierna_derecha" />
@@ -66,7 +66,7 @@
         android:layout_marginEnd="125dp"
         android:contentDescription="@string/txtdescripcion"
         android:rotation="15"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pierna_izquierda" />
@@ -78,8 +78,7 @@
         android:layout_marginTop="330dp"
         android:layout_marginEnd="175dp"
         android:contentDescription="@string/txtdescripcion"
-        android:onClick="perder"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/brazo_izquierdo" />
@@ -91,41 +90,37 @@
         android:layout_marginTop="210dp"
         android:layout_marginEnd="120dp"
         android:contentDescription="@string/txtdescripcion"
-        android:onClick="ganar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cara_triste" />
 
-    <LinearLayout
-        android:id="@+id/palabras"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/txtpalabra"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:background="@android:color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="611dp"
+        android:layout_marginEnd="85dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Palabra"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:autofillHints=""
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <GridView
-        android:id="@+id/letras"
-        android:layout_width="0dp"
+    <Button
+        android:id="@+id/btnValidar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="5dp"
-        android:background="@android:color/black"
-        android:horizontalSpacing="5dp"
-        android:numColumns="7"
-        android:padding="5dp"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="5dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="301dp"
+        android:layout_marginTop="662dp"
+        android:text="Validar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPista" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
