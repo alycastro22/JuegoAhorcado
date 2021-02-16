@@ -14,28 +14,31 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 class PantallaJuego : AppCompatActivity() {
+    private val palabra = mutableMapOf<String, String>("araña" to "Animal 8 patas",  "raton" to "Animal 2 patas ")
+    //"carro" to "Vehiculo", "perro" to "Mascota", "rojo" to "Color Pasión", "domingo" to "Día de descanso", "luna" to "satelite natural de la tierra", "año" to "tiene 365 días ")
+    private var palabrax=""
+    private var pistax= ""
+    private var intentos = 6
+    private var partecuerpo = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_juego)
+        agregarPalabra()
         mostrarpista(palabra)
         btnValidar.setOnClickListener{Validar(palabra)}
-        agregarPalabra()
+
 
 
     }
-    private var palabra = mutableMapOf<String,String>("araña" to "Animal 8 patas", "semana" to "Tiene 7 días", "julio" to "Septimo Mes", "cancion" to "Melodia y ritmo", "araña" to "Animal 8 patas ",
-    "carro" to "Vehiculo", "perro" to "Mascota", "rojo" to "Color Pasión", "domingo" to "Día de descanso", "luna" to "satelite natural de la tierra", "año" to "tiene 365 días ")
-    private val palabrax = palabra.keys.random()
-    private val pistax= palabra.getValue(palabrax)
-    private var intentos = 6
-    private var partecuerpo = 0
-
 
     fun agregarPalabra(){
         val bundle = intent.extras
         val palabraN = bundle?.get("Palabra")
         val pistaN = bundle?.get("pista")
         palabra.put(palabraN.toString(), pistaN.toString())
+        palabra.put("linea", "recta")
+        palabrax = palabra.keys.random()
+        pistax= palabra.getValue(palabrax)
     }
 
 
@@ -66,7 +69,8 @@ class PantallaJuego : AppCompatActivity() {
          val palabraN = bundle?.get("Palabra")
          val pistaN = bundle?.get("pista")
          palabra.put(palabraN.toString(), pistaN.toString())*/
-
+         palabrax = palabra.keys.random()
+         pistax= palabra.getValue(palabrax)
         txtPista.text = getString(R.string.Pista1, pistax)
 
     }
