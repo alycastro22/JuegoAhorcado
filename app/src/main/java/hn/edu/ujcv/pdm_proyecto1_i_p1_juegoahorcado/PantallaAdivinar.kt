@@ -18,13 +18,15 @@ class PantallaAdivinar: AppCompatActivity() {
     }
 
     fun guardarpalabra() {
-
-        val intent  = Intent(this, PantallaJuego::class.java)
-        intent.putExtra("Palabra", idTxtPalabra.text.toString())
-        intent.putExtra("pista", idTxtPista.text.toString())
-        startActivity(intent)
-        Toast.makeText(this, "Palabra agregada con éxito", Toast.LENGTH_SHORT).show()
-
+        if (idTxtPalabra.text.isNotEmpty() && idTxtPista.text.isNotEmpty()) {
+            val intent = Intent(this, PantallaJuego::class.java)
+            intent.putExtra("Palabra", idTxtPalabra.text.toString())
+            intent.putExtra("pista", idTxtPista.text.toString())
+            startActivity(intent)
+            Toast.makeText(this, "Palabra agregada con éxito", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(this, "Llena los campos", Toast.LENGTH_LONG).show()
+        }
     }
 
 }

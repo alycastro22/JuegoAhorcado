@@ -100,9 +100,9 @@
 
     <EditText
         android:id="@+id/txtpalabra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_width="118dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="316dp"
         android:autofillHints=""
         android:backgroundTint="@color/white"
         android:ems="3"
@@ -113,6 +113,7 @@
         android:textColorHint="@color/white"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,9 +121,11 @@
         android:id="@+id/btnValidar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="308dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="286dp"
         android:text="@string/validar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -130,9 +133,29 @@
         android:id="@+id/txvIntento"
         android:layout_width="55dp"
         android:layout_height="18dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="340dp"
         android:text="@string/intentos"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtvMostrarPalabra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="180dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

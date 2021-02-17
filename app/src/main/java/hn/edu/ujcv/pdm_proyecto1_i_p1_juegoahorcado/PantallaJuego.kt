@@ -14,19 +14,23 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 class PantallaJuego : AppCompatActivity() {
-    private val palabra = mutableMapOf<String, String>("araña" to "Animal 8 patas",  "raton" to "Animal 2 patas ")
-    //"carro" to "Vehiculo", "perro" to "Mascota", "rojo" to "Color Pasión", "domingo" to "Día de descanso", "luna" to "satelite natural de la tierra", "año" to "tiene 365 días ")
-    private var palabrax=""
-    private var pistax= ""
+    var palabra = mutableMapOf<String,String>("araña" to "Animal 8 patas", "semana" to "Tiene 7 días", "julio" to "Septimo Mes", "cancion" to "Melodia y ritmo", "araña" to "Animal 8 patas ",
+            "carro" to "Vehiculo", "perro" to "Mascota", "rojo" to "Color Pasión", "domingo" to "Día de descanso", "luna" to "satelite natural de la tierra", "año" to "tiene 365 días ")
+    private var palabrax = ""
+    private var pistax = ""
     private var intentos = 6
     private var partecuerpo = 0
+    private var numcorr = 0
+    private var numchar = 0
+    var correcto = false
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_juego)
         agregarPalabra()
         mostrarpista(palabra)
         btnValidar.setOnClickListener{Validar(palabra)}
-
 
 
     }
@@ -36,41 +40,17 @@ class PantallaJuego : AppCompatActivity() {
         val palabraN = bundle?.get("Palabra")
         val pistaN = bundle?.get("pista")
         palabra.put(palabraN.toString(), pistaN.toString())
-        palabra.put("linea", "recta")
+
         palabrax = palabra.keys.random()
-        pistax= palabra.getValue(palabrax)
+        pistax = palabra.getValue(palabrax)
+
     }
 
 
-
      fun mostrarpista(mutableMap: MutableMap<String, String>){
-         val lista : ArrayList<String>? = intent.getStringArrayListExtra("Lista")
-         val listaPalabra : ArrayList<String>? = intent.getStringArrayListExtra("listapa")
-
-         val pista = ArrayList<String>()
-         pista.add("Animal de 8 patas")
-         pista.add("Tiene 7 días")
-         pista.add("Septimo Mes")
-         pista.add("Tiene melodía y ritmo")
-         pista.add("Vehiculo")
-         pista.add("Mascota")
-         pista.add(lista.toString())
-
-         val palabras = ArrayList<String>()
-         palabras.add("Araña")
-         palabras.add("Semana")
-         palabras.add("Julio")
-         palabras.add("Cancion")
-         palabras.add("Carro")
-         palabras.add("Perro")
-         palabras.add(listaPalabra.toString())
-
-         /*val bundle = intent.extras
-         val palabraN = bundle?.get("Palabra")
-         val pistaN = bundle?.get("pista")
-         palabra.put(palabraN.toString(), pistaN.toString())*/
          palabrax = palabra.keys.random()
-         pistax= palabra.getValue(palabrax)
+         pistax = palabra.getValue(palabrax)
+
         txtPista.text = getString(R.string.Pista1, pistax)
 
     }
@@ -78,65 +58,85 @@ class PantallaJuego : AppCompatActivity() {
 
     fun Validar(mutableMap: MutableMap<String, String>) {
 
+        numchar = palabrax.length
 
-        if (txtpalabra.text.toString().equals(palabrax)) {
-            val ganar = Intent(this, PantallaGanaste::class.java)
-            startActivity(ganar)
-            partecuerpo--
-            limpiar()
+        /*for (palabraChar in palabrax){
+            val palabraChar : CharArray = palabrax.toCharArray()
+            println(palabraChar[0])
+
+        }*/
+        for (letra in palabrax){
+            var letrausaruio = txtpalabra.text.last()
+            if (letra.equals(letrausaruio)){
+                correcto = true
+                txtvMostrarPalabra.setText(letra.toString())
+                partecuerpo= partecuerpo + 0
+                numcorr++
+                println(numcorr)
+                println(palabrax.length)
+            }
+        }
+        if (correcto) {
+            if (numcorr == numchar) {
+                val ganar = Intent(this, PantallaGanaste::class.java)
+                startActivity(ganar)
+                //partecuerpo--
+                limpiar()
+            }
         }
         if (partecuerpo<intentos){
             partecuerpo++
 
-            if (partecuerpo == 1) {
-                imageCabeza.visibility = View.VISIBLE
-                limpiar()
-            }
-            if (partecuerpo == 2) {
-                imageCabeza.visibility = View.VISIBLE
-                imageCuerpo.visibility = View.VISIBLE
-                limpiar()
-            }
-            if (partecuerpo == 3) {
-                imageCabeza.visibility = View.VISIBLE
-                imageCuerpo.visibility = View.VISIBLE
-                imageBrazoDerecho.visibility = View.VISIBLE
-                limpiar()
-            }
-            if (partecuerpo == 4) {
-                imageCabeza.visibility = View.VISIBLE
-                imageCuerpo.visibility = View.VISIBLE
-                imageBrazoDerecho.visibility = View.VISIBLE
-                imageBrazoIzquierdo.visibility = View.VISIBLE
-                limpiar()
-            }
-            if (partecuerpo == 5) {
-                imageCabeza.visibility = View.VISIBLE
-                imageCuerpo.visibility = View.VISIBLE
-                imageBrazoDerecho.visibility = View.VISIBLE
-                imageBrazoIzquierdo.visibility = View.VISIBLE
-                imagePiernaDerecha.visibility = View.VISIBLE
-                limpiar()
-            }
-            if (partecuerpo == 6) {
-                imageCabeza.visibility = View.VISIBLE
-                imageCuerpo.visibility = View.VISIBLE
-                imageBrazoDerecho.visibility = View.VISIBLE
-                imageBrazoIzquierdo.visibility = View.VISIBLE
-                imagePiernaDerecha.visibility = View.VISIBLE
-                imagePiernaIzquierda.visibility = View.VISIBLE
-                val perder = Intent(this, PantallaPerdedor::class.java)
-                startActivity(perder)
-                limpiar()
-            }
+        if (partecuerpo == 1) {
+            imageCabeza.visibility = View.VISIBLE
+            limpiar()
         }
+        if (partecuerpo == 2) {
+            imageCabeza.visibility = View.VISIBLE
+            imageCuerpo.visibility = View.VISIBLE
+            limpiar()
+        }
+        if (partecuerpo == 3) {
+            imageCabeza.visibility = View.VISIBLE
+            imageCuerpo.visibility = View.VISIBLE
+            imageBrazoDerecho.visibility = View.VISIBLE
+            limpiar()
+        }
+        if (partecuerpo == 4) {
+            imageCabeza.visibility = View.VISIBLE
+            imageCuerpo.visibility = View.VISIBLE
+            imageBrazoDerecho.visibility = View.VISIBLE
+            imageBrazoIzquierdo.visibility = View.VISIBLE
+            limpiar()
+        }
+        if (partecuerpo == 5) {
+            imageCabeza.visibility = View.VISIBLE
+            imageCuerpo.visibility = View.VISIBLE
+            imageBrazoDerecho.visibility = View.VISIBLE
+            imageBrazoIzquierdo.visibility = View.VISIBLE
+            imagePiernaDerecha.visibility = View.VISIBLE
+            limpiar()
+        }
+        if (partecuerpo == 6) {
+            imageCabeza.visibility = View.VISIBLE
+            imageCuerpo.visibility = View.VISIBLE
+            imageBrazoDerecho.visibility = View.VISIBLE
+            imageBrazoIzquierdo.visibility = View.VISIBLE
+            imagePiernaDerecha.visibility = View.VISIBLE
+            imagePiernaIzquierda.visibility = View.VISIBLE
+            val perder = Intent(this, PantallaPerdedor::class.java)
+            startActivity(perder)
+            limpiar()
+        }
+    }
 
     }
+
+
+
     fun limpiar(){
         txtpalabra.text.clear()
     }
-
-
 
 
     /* fun validarletra(): Boolean{
