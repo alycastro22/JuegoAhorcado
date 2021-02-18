@@ -34,10 +34,10 @@ class PantallaJuego : AppCompatActivity() {
         setContentView(R.layout.activity_pantalla_juego)
         agregarPalabra()
         mostrarpista(palabra)
+        muñeco()
         btnValidar.setOnClickListener{Validar(palabra)}
-
         CrearViews()
-        //muñeco()
+
 
     }
 
@@ -76,15 +76,13 @@ class PantallaJuego : AppCompatActivity() {
             if (letra.equals(letrausaruio)){
                 numcorr++
                 correcto = true
-                break
             }
 
         }
         if (!correcto ){
             --intentos
-
-            partecuerpo++
             muñeco()
+            partecuerpo++
             limpiar()
         }else {
             MostrarLetra()
@@ -125,6 +123,7 @@ class PantallaJuego : AppCompatActivity() {
             }
 
         }
+
     }
 
 
